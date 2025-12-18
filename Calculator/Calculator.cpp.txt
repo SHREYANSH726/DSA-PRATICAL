@@ -1,0 +1,81 @@
+#include <iostream>
+using namespace std;
+
+// User Defined Functions
+int add(int a, int b) {
+    return a + b;
+}
+
+int sub(int a, int b) {
+    return a - b;
+}
+
+int mul(int a, int b) {
+    return a * b;
+}
+
+int divi(int a, int b) {
+    return a / b;
+}
+
+int mod(int a, int b) {
+    return a % b;
+}
+
+int main() {
+    int choice, a, b;
+
+    while (true) {
+        cout << "\nPress 1 for +";
+        cout << "\nPress 2 for -";
+        cout << "\nPress 3 for *";
+        cout << "\nPress 4 for /";
+        cout << "\nPress 5 for %";
+        cout << "\nPress 0 for exit";
+        cout << "\n\nEnter your choice: ";
+        cin >> choice;
+
+        if (choice == 0) {
+            cout << "Program exited." << endl;
+            break;
+        }
+
+        cout << "Enter the first number: ";
+        cin >> a;
+        cout << "Enter the second number: ";
+        cin >> b;
+
+        switch (choice) {
+            case 1:
+                cout << "Addition of " << a << " and " << b
+                     << " is " << add(a, b) << endl;
+                break;
+
+            case 2:
+                cout << "Subtraction of " << a << " and " << b
+                     << " is " << sub(a, b) << endl;
+                break;
+
+            case 3:
+                cout << "Multiplication of " << a << " and " << b
+                     << " is " << mul(a, b) << endl;
+                break;
+
+            case 4:
+                
+                    cout << "Division of " << a << " and " << b
+                         << " is " << divi(a, b) << endl;
+                    break;
+
+            case 5:
+                    cout << "Modulus of " << a << " and " << b
+                         << " is " << mod(a, b) << endl;
+                    break;
+
+            default:
+                cout << "Invalid choice" << endl;
+        }
+    }
+
+    return 0;
+}
